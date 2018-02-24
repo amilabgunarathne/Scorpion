@@ -1,21 +1,24 @@
-from flask import Flask, request
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Feb 24 14:36:54 2018
+
+@author: Kanchana Ranasinghe
+"""
+
+from flask import Flask, request, Response
+from flask_api import status
 from flask_restful import Resource, Api
 from sqlalchemy import create_engine
 from json import dumps
 from flask.ext.jsonpify import jsonify
-from flask import Response
 
+#db_connect = create_engine('sqlite:///scorpion.db')
 app = Flask(__name__)
-api = Api(app)
 
-
-class API(Resource):
-    def get(self):
-        resp = Response("")
-        resp.headers['Access-Control-Allow-Origin'] = '*'
-        return resp
-
-api.add_resource(API, '/api') # Route_1
+@app.route('/api', methods=['GET'])
+def index():
+    resp = Response({}, status=200, mimetype='application/json')
+    return resp
 
 if __name__ == '__main__':
      app.run(port=8090)
