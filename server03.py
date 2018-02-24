@@ -30,6 +30,6 @@ def random_password():
         test = test + str(random.randint(0,9))
     test = test + random.choice(string.ascii_letters).lower()
     test = test + random.choice(string.ascii_letters).upper()
-    test = test + lis[random.randint(0,len(lis))]
+    test = test + random.choice(lis)
     return test
 
