@@ -1,5 +1,11 @@
 # LetMeHack
 
+
+## Main File
+
+server02.py is the main file. 
+
+
 Request/Response Format
 All requests and responses must be in JSON, with the Content-Type header set to application/json.
 
