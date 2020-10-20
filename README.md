@@ -5,6 +5,10 @@
 
 server02.py is the main file. 
 
+# Alumina Platform
+This is a project based on creating and maintaining a alumni platform for old boys.
+
+
 
 ## Other
 
